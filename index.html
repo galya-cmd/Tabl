@@ -6,8 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>Заголовок</h1>
+<style>
+    .header{
+        grid-area: hd;
+        
+    }
+    .main{
+        grid-area: main;
+    }
+    aside{
+        grid-area: as;
+    }
+    .footer{
+        grid-area: ft;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "hd hd hd hd"
+        "main main main as"
+        "main main main as"
+        "ft ft ft ft";
+        width: 700px;
+        height: 600px;
+                }
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 60px;
+        column-gap: 15px;
+        padding: 15px;
+        align-items:
+        
+        
+    }
+    .and1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 3; 
+        
+    }
+    .and2{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        
+    }
+    .and3{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 5;
+        
+
+    }
+.container_footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px;
+    column-gap: 15px;
+    padding: 15px;
+
+
+}
+
+
+
     
+</style>
+<body>
+    <div class="container">
+        <header class="header" style="background-color: grey;">Шапка</header>
+        <aside class="aside" style="background-color: lightgreen;">Боковая область</aside>
+        <main class="main" style="background-color: khaki;">Основная часть
+            <div class="and1" style="background-color: lightgoldenrodyellow;">tot1</div>
+            <div class="and2" style="background-color: lightgoldenrodyellow;">tot2</div>
+            <div class="and3" style="background-color: lightgoldenrodyellow;">tot3</div> 
+        </main>               
+        <footer class="footer" style="background-color: dimgrey;"> 
+            <div class="container_footer" >        
+            <div  style="background-color: lightgrey;">Футр1</div>
+            <div  style="background-color: lightgrey;">Футр2</div>
+            <div  style="background-color: lightgrey;">Футр3</div>
+            <div  style="background-color: lightgrey;">Футр4</div>
+        </div> 
+        </footer>
+        </div>
+    </div>                          
 </body>
 </html>
